@@ -10,7 +10,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  ThemeData _MyTheme = ThemeData(
+  ThemeData _myTheme = ThemeData(
     brightness: Brightness.light,
     primaryColor: Colors.grey[100],
     accentColor: Colors.blueAccent,
@@ -28,7 +28,7 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'LoL',
-      theme: _MyTheme,
+      theme: _myTheme,
       home: HomeView(),
     );
   }

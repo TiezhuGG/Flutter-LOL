@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import '../utils/api.dart' as api;
+import './homeList.dart';
+import '../utils/utils.dart';
+import '../utils/constant.dart';
 
 class HomeView extends StatefulWidget {
   HomeView({Key key}) : super(key: key);
@@ -48,12 +51,12 @@ class _HomeViewState extends State<HomeView>
       body: TabBarView(
         controller: _tabController,
         children: <Widget>[
-          Text('战士'),
-          Text('坦克'),
-          Text('法师'),
-          Text('刺客'),
-          Text('辅助'),
-          Text('射手'),
+          HomeList(data: Utils.filterHeroByTag(heroList, Tags.Fighter)),
+          HomeList(data: Utils.filterHeroByTag(heroList, Tags.Tank)),
+          HomeList(data: Utils.filterHeroByTag(heroList, Tags.Mage)),
+          HomeList(data: Utils.filterHeroByTag(heroList, Tags.Assassin)),
+          HomeList(data: Utils.filterHeroByTag(heroList, Tags.Support)),
+          HomeList(data: Utils.filterHeroByTag(heroList, Tags.Marksman)),
         ],
       ),
     );

@@ -14,7 +14,7 @@ class Utils {
   }
   
   // 获取英雄头像
-  static getHeroAvtar(image) => '${Constant.imgBaseUrl}/img/champion/$image';
+  static getHeroAvatar(image) => '${Constant.imgBaseUrl}/img/champion/$image';
   // 获取英雄皮肤大图
   static getHeroSkin(id) => '${Constant.imgBaseUrl}/web201310/skin/big$id.jpg';
   // 通过tag过滤英雄列表

@@ -23,7 +23,7 @@ class HeroItem extends StatelessWidget {
           color: Colors.grey[50],
           shadows: [
             BoxShadow(
-              color: Colors.grey.withOpacity(0.3),
+              color: Colors.blue.withOpacity(0.3),
               offset: Offset(0.0, 0.0),
               blurRadius: 6.0,
               spreadRadius: 0.0,
@@ -37,7 +37,7 @@ class HeroItem extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
             HeroItemAvatar(
-              img: Utils.getHeroAvtar(data.image['full']),
+              img: Utils.getHeroAvatar(data.image['full']),
             ),
             SizedBox(
               width: 20,

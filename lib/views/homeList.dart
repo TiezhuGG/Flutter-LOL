@@ -20,7 +20,7 @@ class _HomeListState extends State<HomeList> with AutomaticKeepAliveClientMixin 
     super.build(context);
     return Container(
        child: ListView.builder(
-         itemCount: 10,
+         itemCount: widget.data.length,
          itemBuilder: (BuildContext context, int index) {
            return HeroItem(data: HeroSimple.fromJson(widget.data[index]));
          },

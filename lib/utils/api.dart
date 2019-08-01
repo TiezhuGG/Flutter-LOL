@@ -12,7 +12,7 @@ getHeroList() async {
 }
 
 getHeroDetail(id) async {
-  var res = await http.get('http://47.52.142.157:3002/hero$id');
+  var res = await http.get('http://47.52.142.157:3002/hero/$id');
   if (res.statusCode == 200) {
     return convert.jsonDecode(res.body);
   } else {
@@ -20,6 +20,3 @@ getHeroDetail(id) async {
   }
 }
 
-main() {
-  getHeroList();
-}

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import './views/home.dart';
+import './utils/router.dart' as router;
 
 void main() => runApp(MyApp());
 
@@ -27,9 +28,11 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'LoL',
+      title: 'LoL英雄资料卡',
       theme: _myTheme,
       home: HomeView(),
+      onGenerateRoute: router.generateRoute,
+      initialRoute: '/',
     );
   }
 }
